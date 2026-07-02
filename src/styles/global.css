@@ -1,17 +1,17 @@
-/* ─── CSS Custom Properties ─────────────────────────────────────── */
+﻿/* ─── CSS Custom Properties ─────────────────────────────────────── */
 :root {
   --navy:        #1c2940;
   --navy-mid:    #2d3f5e;
-  --gold:        #b8973a;
-  --gold-light:  #d4b870;
-  --gold-pale:   #f0e8cc;
+  --gold:        #00C4CC;
+  --gold-light:  #33D0D5;
+  --gold-pale:   #E0F7F8;
   --text-dark:   #1a202c;
   --text-mid:    #4a5568;
   --text-light:  #718096;
   --bg-light:    #f9f8f5;
-  --bg-cream:    #f4f1ea;
+  --bg-cream:    #f0fafb;
   --white:       #ffffff;
-  --border:      #e2d9c5;
+  --border:      #c5e3e5;
   --text-muted:  #718096;
   --topbar-h:    38px;
   --nav-h:       76px;

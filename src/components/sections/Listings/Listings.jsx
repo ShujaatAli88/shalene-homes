@@ -5,7 +5,7 @@ import { listings } from '../../../data/listings'
 import useScrollReveal from '../../../hooks/useScrollReveal'
 
 const STATUS_COLOR = {
-  active:  { bg: '#b8973a', label: 'Active' },
+  active:  { bg: '#00C4CC', label: 'Active' },
   pending: { bg: '#1c2940', label: 'Pending' },
   sold:    { bg: '#3a5a40', label: 'Sold' },
 }

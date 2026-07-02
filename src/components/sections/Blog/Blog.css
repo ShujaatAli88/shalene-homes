@@ -1,4 +1,4 @@
-/* Subtle overlay — enough contrast for text, light enough to see the image */
+﻿/* Subtle overlay — enough contrast for text, light enough to see the image */
 .blog.parallax::before {
   background: linear-gradient(
     160deg,

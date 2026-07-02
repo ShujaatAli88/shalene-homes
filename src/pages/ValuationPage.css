@@ -1,4 +1,4 @@
-.vp-steps-section { padding: 80px 0; background: var(--bg-light); }
+﻿.vp-steps-section { padding: 80px 0; background: var(--bg-light); }
 
 .vp-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
 

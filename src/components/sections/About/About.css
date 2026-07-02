@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════
    ABOUT — parallax + cinematic overlay
 ═══════════════════════════════════════════ */
 .about { padding: 130px 0; position: relative; overflow: hidden; }
@@ -91,7 +91,7 @@
   left: 16px;
   font-family: var(--font-serif);
   font-size: 80px;
-  color: rgba(184,151,58,0.25);
+  color: rgba(0,196,204,0.25);
   line-height: 1;
   font-weight: 900;
 }
@@ -120,7 +120,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0;
   margin: 32px 0 28px;
-  border: 1px solid rgba(184,151,58,0.18);
+  border: 1px solid rgba(0,196,204,0.18);
   border-radius: 8px;
   overflow: hidden;
   background: rgba(255,255,255,0.02);
@@ -132,7 +132,7 @@
   align-items: center;
   gap: 4px;
   padding: 20px 12px;
-  border-right: 1px solid rgba(184,151,58,0.14);
+  border-right: 1px solid rgba(0,196,204,0.14);
   text-align: center;
 }
 .about__stat:last-child { border-right: none; }
@@ -142,7 +142,7 @@
   font-weight: 700;
   color: var(--gold-light);
   line-height: 1;
-  background: linear-gradient(135deg, var(--gold), #fff8e0);
+  background: linear-gradient(135deg, var(--gold), #e0fafb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -169,13 +169,13 @@
   gap: 10px;
   padding: 10px 14px;
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(184,151,58,0.14);
+  border: 1px solid rgba(0,196,204,0.14);
   border-radius: 8px;
   transition: background 0.2s, border-color 0.2s;
 }
 .about__cred-item:hover {
-  background: rgba(184,151,58,0.08);
-  border-color: rgba(184,151,58,0.30);
+  background: rgba(0,196,204,0.08);
+  border-color: rgba(0,196,204,0.30);
 }
 .about__cred-check {
   color: var(--gold);
@@ -373,8 +373,8 @@
 .about__info-social .social-icon {
   width: 34px;
   height: 34px;
-  background: rgba(184,151,58,0.15);
-  border: 1px solid rgba(184,151,58,0.30);
+  background: rgba(0,196,204,0.15);
+  border: 1px solid rgba(0,196,204,0.30);
   border-radius: 50%;
   transition: background 0.25s, transform 0.25s;
 }

@@ -1,4 +1,4 @@
-/* Overlay */
+﻿/* Overlay */
 .services.parallax::before {
   background: linear-gradient(
     135deg,
@@ -38,7 +38,7 @@
 .svc-card:hover {
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.09);
-  border-color: rgba(184, 151, 58, 0.35);
+  border-color: rgba(0,196,204, 0.35);
   box-shadow: 0 30px 80px rgba(0,0,0,0.30);
 }
 
@@ -69,7 +69,7 @@
   transition: color 0.4s;
   letter-spacing: -4px;
 }
-.svc-card:hover .svc-card__step { color: rgba(184,151,58,0.08); }
+.svc-card:hover .svc-card__step { color: rgba(0,196,204,0.08); }
 
 /* ─── Icon ─────────────────────────────────────────────── */
 .svc-card__icon-wrap {
@@ -77,8 +77,8 @@
 }
 .svc-card__icon {
   width: 62px; height: 62px;
-  background: rgba(184,151,58,0.12);
-  border: 1px solid rgba(184,151,58,0.28);
+  background: rgba(0,196,204,0.12);
+  border: 1px solid rgba(0,196,204,0.28);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -86,8 +86,8 @@
   transition: background 0.35s, border-color 0.35s, transform 0.35s;
 }
 .svc-card:hover .svc-card__icon {
-  background: rgba(184,151,58,0.22);
-  border-color: rgba(184,151,58,0.55);
+  background: rgba(0,196,204,0.22);
+  border-color: rgba(0,196,204,0.55);
   transform: scale(1.08) rotate(-3deg);
 }
 .svc-card__icon svg { width: 26px; height: 26px; fill: var(--gold-light); }
@@ -151,19 +151,19 @@
   flex: 1;
   max-width: 120px;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(184,151,58,0.60));
+  background: linear-gradient(to right, transparent, rgba(0,196,204,0.60));
 }
 .services__connector-line:last-child {
-  background: linear-gradient(to left, transparent, rgba(184,151,58,0.60));
+  background: linear-gradient(to left, transparent, rgba(0,196,204,0.60));
 }
 .services__connector-dot {
   width: 5px; height: 5px;
   border-radius: 50%;
-  border: 1px solid rgba(184,151,58,0.70);
+  border: 1px solid rgba(0,196,204,0.70);
 }
 .services__connector-dot:nth-child(3) {
   width: 7px; height: 7px;
-  background: rgba(184,151,58,0.40);
+  background: rgba(0,196,204,0.40);
 }
 
 @media (max-width: 1000px) {

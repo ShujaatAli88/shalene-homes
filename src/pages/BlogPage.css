@@ -1,4 +1,4 @@
-.bp-section { padding: 80px 0 100px; background: var(--bg-light); }
+﻿.bp-section { padding: 80px 0 100px; background: var(--bg-light); }
 
 .bp-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
 .bp-filter {

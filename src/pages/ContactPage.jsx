@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { agent } from '../data/agent'
 import SocialIcons from '../components/ui/SocialIcons'
 import './ContactPage.css'
@@ -8,45 +8,45 @@ const ICONS = {
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M20 6L4 18h4v16h10v-9h4v9h10V18h4L20 6z" fill="#1c2940" fillOpacity=".12"/>
       <path d="M20 6L4 18h4v16h10v-9h4v9h10V18h4L20 6z" stroke="#1c2940" strokeWidth="1.8" strokeLinejoin="round"/>
-      <rect x="16" y="27" width="8" height="7" rx="1" fill="#b8973a" opacity=".9"/>
-      <path d="M14 22h12" stroke="#b8973a" strokeWidth="1.5" strokeLinecap="round"/>
+      <rect x="16" y="27" width="8" height="7" rx="1" fill="#00C4CC" opacity=".9"/>
+      <path d="M14 22h12" stroke="#00C4CC" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
   sell: (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="6" y="12" width="20" height="18" rx="2" fill="#1c2940" fillOpacity=".10" stroke="#1c2940" strokeWidth="1.8"/>
       <path d="M26 18h5l3 3-3 3h-5" stroke="#1c2940" strokeWidth="1.8" strokeLinejoin="round"/>
-      <path d="M10 18h10M10 23h7" stroke="#b8973a" strokeWidth="1.8" strokeLinecap="round"/>
-      <circle cx="16" cy="10" r="3" fill="#b8973a" opacity=".8"/>
+      <path d="M10 18h10M10 23h7" stroke="#00C4CC" strokeWidth="1.8" strokeLinecap="round"/>
+      <circle cx="16" cy="10" r="3" fill="#00C4CC" opacity=".8"/>
     </svg>
   ),
   both: (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14 8L6 14h3v9h10V14h3L14 8z" fill="#1c2940" fillOpacity=".12" stroke="#1c2940" strokeWidth="1.7" strokeLinejoin="round"/>
-      <path d="M26 18l8 6h-3v9H21v-9h-3l8-6z" fill="#b8973a" fillOpacity=".18" stroke="#b8973a" strokeWidth="1.7" strokeLinejoin="round"/>
+      <path d="M26 18l8 6h-3v9H21v-9h-3l8-6z" fill="#00C4CC" fillOpacity=".18" stroke="#00C4CC" strokeWidth="1.7" strokeLinejoin="round"/>
     </svg>
   ),
   value: (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="18" cy="18" r="11" fill="#1c2940" fillOpacity=".08" stroke="#1c2940" strokeWidth="1.8"/>
-      <path d="M12 22l4-5 4 3 4-6" stroke="#b8973a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 22l4-5 4 3 4-6" stroke="#00C4CC" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M26 26l6 6" stroke="#1c2940" strokeWidth="2.2" strokeLinecap="round"/>
-      <circle cx="29" cy="29" r="1.5" fill="#b8973a"/>
+      <circle cx="29" cy="29" r="1.5" fill="#00C4CC"/>
     </svg>
   ),
   invest: (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="5" y="22" width="6" height="12" rx="1.5" fill="#1c2940" fillOpacity=".80"/>
       <rect x="13" y="16" width="6" height="18" rx="1.5" fill="#1c2940" fillOpacity=".55"/>
-      <rect x="21" y="10" width="6" height="24" rx="1.5" fill="#b8973a" opacity=".85"/>
-      <path d="M8 18l8-6 8 4 8-8" stroke="#b8973a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-      <circle cx="32" cy="8" r="2.5" fill="#b8973a"/>
+      <rect x="21" y="10" width="6" height="24" rx="1.5" fill="#00C4CC" opacity=".85"/>
+      <path d="M8 18l8-6 8 4 8-8" stroke="#00C4CC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+      <circle cx="32" cy="8" r="2.5" fill="#00C4CC"/>
     </svg>
   ),
   relocate: (
     <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M20 5C14.48 5 10 9.48 10 15c0 8 10 20 10 20s10-12 10-20c0-5.52-4.48-10-10-10z" fill="#1c2940" fillOpacity=".10" stroke="#1c2940" strokeWidth="1.8"/>
-      <circle cx="20" cy="15" r="4" fill="#b8973a" opacity=".9"/>
+      <circle cx="20" cy="15" r="4" fill="#00C4CC" opacity=".9"/>
       <path d="M6 36c3-2 6-3 14-3s11 1 14 3" stroke="#1c2940" strokeWidth="1.5" strokeLinecap="round" opacity=".3"/>
     </svg>
   ),

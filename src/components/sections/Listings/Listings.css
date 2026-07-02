@@ -1,4 +1,4 @@
-/* Dark navy background with subtle dot grid */
+﻿/* Dark navy background with subtle dot grid */
 .listings {
   padding: 110px 0;
   background: var(--navy);
@@ -8,7 +8,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(rgba(184,151,58,0.04) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(0,196,204,0.04) 1px, transparent 1px);
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -166,7 +166,7 @@
   align-items: center;
   gap: 14px;
   padding: 18px 52px;
-  border: 1.5px solid rgba(184,151,58,0.45);
+  border: 1.5px solid rgba(0,196,204,0.45);
   border-radius: 50px;
   font-family: var(--font-sans);
   font-size: 10.5px;
@@ -182,7 +182,7 @@
   border-color: var(--gold);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(184,151,58,0.35);
+  box-shadow: 0 8px 32px rgba(0,196,204,0.35);
 }
 .listings__more-arrow {
   font-size: 15px;

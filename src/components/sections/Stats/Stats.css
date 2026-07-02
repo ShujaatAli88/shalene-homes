@@ -1,4 +1,4 @@
-/* Lighter overlay so the city image actually shows through */
+﻿/* Lighter overlay so the city image actually shows through */
 .stats.parallax::before {
   background: linear-gradient(
     to bottom,
@@ -18,7 +18,7 @@
 .stats__item {
   text-align: center;
   padding: 20px 24px;
-  border-right: 1px solid rgba(184, 151, 58, 0.25);
+  border-right: 1px solid rgba(0,196,204, 0.25);
 }
 .stats__item:last-child { border-right: none; }
 
@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
   .stats__grid { grid-template-columns: 1fr 1fr; padding: 80px 0; }
-  .stats__item { border-right: none; border-bottom: 1px solid rgba(184,151,58,.20); padding: 36px 16px; }
-  .stats__item:nth-child(odd) { border-right: 1px solid rgba(184,151,58,.20); }
+  .stats__item { border-right: none; border-bottom: 1px solid rgba(0,196,204,.20); padding: 36px 16px; }
+  .stats__item:nth-child(odd) { border-right: 1px solid rgba(0,196,204,.20); }
   .stats__item:last-child { border-bottom: none; }
 }

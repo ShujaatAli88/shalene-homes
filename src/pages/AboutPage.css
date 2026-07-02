@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════
+﻿/* ═══════════════════════════════════════════
    ABOUT PAGE — full immersive redesign
 ═══════════════════════════════════════════ */
 .ap-page { overflow-x: hidden; }
@@ -146,7 +146,7 @@
   align-items: center;
   background: rgba(5,10,20,0.75);
   backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(184,151,58,0.20);
+  border-top: 1px solid rgba(0,196,204,0.20);
   padding: 20px 64px;
 }
 .ap-hero__stat {
@@ -160,7 +160,7 @@
   font-family: var(--font-serif);
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--gold), #fff8e0);
+  background: linear-gradient(135deg, var(--gold), #e0fafb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -181,7 +181,7 @@
   transform: translateY(-50%);
   width: 1px;
   height: 32px;
-  background: rgba(184,151,58,0.22);
+  background: rgba(0,196,204,0.22);
 }
 
 /* Scroll hint */
@@ -225,7 +225,7 @@
    SECTION 2 — STORY TABS
 ═══════════════════════════════════════════ */
 .ap-story {
-  background: #faf8f4;
+  background: #f5fafb;
   padding: 100px 0 110px;
   position: relative;
   overflow: hidden;
@@ -240,7 +240,7 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(184,151,58,0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,196,204,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -292,7 +292,7 @@
   font-size: 88px;
   font-weight: 800;
   line-height: 1;
-  background: linear-gradient(135deg, var(--gold), rgba(184,151,58,0.25));
+  background: linear-gradient(135deg, var(--gold), rgba(0,196,204,0.25));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -369,8 +369,8 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .ap-story__cred:hover {
-  border-color: rgba(184,151,58,0.30);
-  box-shadow: 0 4px 16px rgba(184,151,58,0.10);
+  border-color: rgba(0,196,204,0.30);
+  box-shadow: 0 4px 16px rgba(0,196,204,0.10);
 }
 .ap-story__cred-icon {
   width: 18px;
@@ -518,20 +518,20 @@
   height: 12px;
   border-radius: 50%;
   background: rgba(255,255,255,0.18);
-  border: 2px solid rgba(184,151,58,0.25);
+  border: 2px solid rgba(0,196,204,0.25);
   transition: background 0.25s, border-color 0.25s, transform 0.25s;
   flex-shrink: 0;
   display: block;
 }
-.ap-tl-year:hover .ap-tl-year__dot  { background: rgba(184,151,58,0.35); border-color: var(--gold); }
-.ap-tl-year--on .ap-tl-year__dot    { background: var(--gold); border-color: var(--gold); transform: scale(1.4); box-shadow: 0 0 0 4px rgba(184,151,58,0.20); }
+.ap-tl-year:hover .ap-tl-year__dot  { background: rgba(0,196,204,0.35); border-color: var(--gold); }
+.ap-tl-year--on .ap-tl-year__dot    { background: var(--gold); border-color: var(--gold); transform: scale(1.4); box-shadow: 0 0 0 4px rgba(0,196,204,0.20); }
 .ap-tl-year__line {
   position: absolute;
   top: 36px;
   left: 50%;
   right: -50%;
   height: 1px;
-  background: rgba(184,151,58,0.20);
+  background: rgba(0,196,204,0.20);
   pointer-events: none;
 }
 
@@ -544,7 +544,7 @@
   margin: 0 auto;
   background: rgba(255,255,255,0.04);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(184,151,58,0.18);
+  border: 1px solid rgba(0,196,204,0.18);
   border-left: 3px solid var(--gold);
   border-radius: 0 12px 12px 0;
   padding: 36px 44px;
@@ -558,7 +558,7 @@
   font-family: var(--font-serif);
   font-size: 48px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--gold), rgba(184,151,58,0.30));
+  background: linear-gradient(135deg, var(--gold), rgba(0,196,204,0.30));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -655,13 +655,13 @@
   transition: all 0.28s ease;
 }
 .ap-cta__btn--gold {
-  background: linear-gradient(135deg, #b8973a, #d4af37);
+  background: linear-gradient(135deg, #00C4CC, #00D0D8);
   color: #fff;
-  box-shadow: 0 8px 32px rgba(184,151,58,0.40);
+  box-shadow: 0 8px 32px rgba(0,196,204,0.40);
 }
 .ap-cta__btn--gold:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 44px rgba(184,151,58,0.55);
+  box-shadow: 0 14px 44px rgba(0,196,204,0.55);
 }
 .ap-cta__btn--outline {
   background: transparent;

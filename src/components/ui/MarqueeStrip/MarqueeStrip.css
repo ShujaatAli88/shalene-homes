@@ -1,4 +1,4 @@
-/* ─── Outer wrapper — clips overflow ───────────────────── */
+﻿/* ─── Outer wrapper — clips overflow ───────────────────── */
 .marquee-strip {
   background: var(--bg-cream);
   border-top: 1px solid var(--border);

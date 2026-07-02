@@ -1,4 +1,4 @@
-.topbar {
+﻿.topbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
 }
 
 .topbar a {
-  color: rgba(212, 184, 112, 0.9);
+  color: rgba(0, 196, 204, 0.9);
   text-decoration: none;
   transition: color 0.25s;
 }

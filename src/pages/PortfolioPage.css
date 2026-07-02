@@ -1,4 +1,4 @@
-.pp-stats { padding: 56px 0; background: var(--navy); }
+﻿.pp-stats { padding: 56px 0; background: var(--navy); }
 .pp-stat-row { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
 .pp-stat { text-align: center; }
 .pp-stat__num { display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }

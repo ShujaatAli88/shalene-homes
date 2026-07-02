@@ -1,4 +1,4 @@
-.np-section { padding: 80px 0 100px; background: var(--bg-light); }
+﻿.np-section { padding: 80px 0 100px; background: var(--bg-light); }
 
 .np-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 
