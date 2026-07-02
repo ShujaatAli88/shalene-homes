@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: calc(var(--topbar-h) + var(--nav-h));
+  padding-bottom: 100px;
 }
 
 /* ─── Video — fills viewport ───────────────────────────── */
