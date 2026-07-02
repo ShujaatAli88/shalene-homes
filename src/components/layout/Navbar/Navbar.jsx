@@ -1,0 +1,116 @@
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import './Navbar.css'
+import { agent } from '../../../data/agent'
+
+const NAV_ITEMS = [
+  { label: 'Portfolio',      path: '/portfolio' },
+  { label: 'Neighborhoods',  path: '/neighborhoods' },
+  { label: 'Home Search',    path: '/listings' },
+  { label: 'Home Valuation', path: '/valuation' },
+  { label: 'About', path: '/about' },
+]
+
+export default function Navbar() {
+  const [scrolled,  setScrolled]  = useState(false)
+  const [menuOpen,  setMenuOpen]  = useState(false)
+  const location = useLocation()
+
+  const isHome      = location.pathname === '/'
+  const transparent = isHome && !scrolled
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => { setMenuOpen(false) }, [location.pathname])
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
+
+  const isActive = (item) => {
+    if (item.children) return item.children.some((c) => location.pathname === c.path)
+    return location.pathname === item.path
+  }
+
+  return (
+    <>
+      <nav className={[
+        'navbar',
+        transparent ? 'navbar--glass' : 'navbar--solid',
+        scrolled    ? 'navbar--scrolled' : '',
+      ].filter(Boolean).join(' ')}>
+        <div className="container">
+          <div className="navbar__inner">
+
+            {/* Logo */}
+            <Link to="/" className="navbar__logo">
+              <span className="navbar__logo-name">{agent.name}</span>
+              <span className="navbar__logo-tag">{agent.tagline}</span>
+            </Link>
+
+            {/* Vertical divider */}
+            <div className="navbar__divider" />
+
+            {/* Desktop links */}
+            <ul className="navbar__links">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.label} className="navbar__item">
+                  <Link
+                    to={item.path}
+                    className={`navbar__link${isActive(item) ? ' navbar__link--active' : ''}`}
+                  >
+                    {item.label}
+                    {item.children && <span className="navbar__chevron">▾</span>}
+                  </Link>
+                  {item.children && (
+                    <ul className="navbar__dropdown">
+                      {item.children.map((c) => (
+                        <li key={c.label}>
+                          <Link
+                            to={c.path}
+                            className={`navbar__dropdown-link${location.pathname === c.path ? ' navbar__dropdown-link--active' : ''}`}
+                          >
+                            {c.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+
+            <Link to="/contact" className="navbar__cta">Let's Connect</Link>
+
+            <button
+              className={`navbar__hamburger${menuOpen ? ' navbar__hamburger--open' : ''}`}
+              onClick={() => setMenuOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
+              <span /><span /><span />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile overlay */}
+      <div className={`mobile-nav${menuOpen ? ' mobile-nav--open' : ''}`} aria-hidden={!menuOpen}>
+        <button className="mobile-nav__close" onClick={() => setMenuOpen(false)}>✕</button>
+        <Link to="/" className="mobile-nav__link" onClick={() => setMenuOpen(false)}>Home</Link>
+        {NAV_ITEMS.map((item) => (
+          <Link key={item.label} to={item.path} className="mobile-nav__link" onClick={() => setMenuOpen(false)}>
+            {item.label}
+          </Link>
+        ))}
+        <Link to="/contact" className="mobile-nav__cta" onClick={() => setMenuOpen(false)}>
+          Let's Connect
+        </Link>
+      </div>
+    </>
+  )
+}

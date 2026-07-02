@@ -1,0 +1,51 @@
+export const agent = {
+  name:      'Shalene KJ Brostek',
+  title:     'Licensed REALTOR®',
+  license:   'FL-BK3421897',
+  brokerage: 'KW Reserve',
+  phone:     '(562) 371-9555',
+  phoneRaw:  '5623719555',
+  email:     'shalene@youlivingforward.com',
+  address: {
+    street: '450 Royal Palm Way',
+    city:   'Palm Beach',
+    state:  'FL',
+    zip:    '33480',
+  },
+  hours: [
+    { days: 'Mon – Sat', time: '8:00 AM – 7:00 PM' },
+    { days: 'Sunday',    time: 'By Appointment' },
+  ],
+  social: {
+    facebook:  '#',
+    instagram: '#',
+    linkedin:  '#',
+    youtube:   '#',
+    zillow:    '#',
+    google:    '#',
+  },
+  tagline:      'Real Estate · Palm Beach County',
+  heroHeadline: 'Palm Beach County Real Estate, Elevated',
+  heroSub:
+    'Dedicated to delivering extraordinary results for buyers and sellers across Palm Beach, Boca Raton, Delray Beach, Wellington, and Jupiter — with strategy, transparency, and genuine care.',
+  locations: ['Palm Beach', 'Boca Raton', 'Delray Beach', 'Wellington', 'Jupiter'],
+  stats: [
+    { num: '15+',   label: 'Years of Experience' },
+    { num: '$2.4B', label: 'In Closed Transactions' },
+    { num: '850+',  label: 'Homes Sold' },
+    { num: '98%',   label: 'Client Satisfaction Rate' },
+  ],
+  bio: [
+    'With over 15 years of experience in Palm Beach County real estate, Shalene KJ Brostek has built a reputation for delivering exceptional results through market expertise, strategic thinking, and an unwavering commitment to client success.',
+    "Shalene's background in finance and corporate strategy informs her analytical approach to real estate — evaluating every transaction through the lens of long-term value and risk management. Whether representing first-time buyers or seasoned investors, she brings the same rigor and care to every deal.",
+    'A Palm Beach County resident for over two decades, Shalene has deep roots in the communities she serves and an intimate understanding of each neighborhood\'s unique market dynamics.',
+  ],
+  credentials: [
+    'Licensed Florida REALTOR® — License #FL-BK3421897',
+    'Certified Luxury Home Marketing Specialist (CLHMS)',
+    'Accredited Buyer\'s Representative (ABR®)',
+    'Palm Beach Board of REALTORS® Member',
+    'Top 1% of Agents in Palm Beach County',
+  ],
+  photo: '/Shalene Enhanced Image.jpg',
+}

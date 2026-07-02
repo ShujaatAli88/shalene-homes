@@ -1,0 +1,28 @@
+.pp-stats { padding: 56px 0; background: var(--navy); }
+.pp-stat-row { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
+.pp-stat { text-align: center; }
+.pp-stat__num { display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.pp-stat__label { display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.55); font-weight: 600; }
+
+.pp-grid-section { padding: 80px 0 100px; background: var(--bg-light); }
+.pp-grid-section .section-header { text-align: center; margin-bottom: 56px; }
+
+.pp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+.pp-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.06); transition: transform 0.3s, box-shadow 0.3s; }
+.pp-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(0,0,0,.10); }
+
+.pp-card__img-wrap { position: relative; padding-top: 65%; overflow: hidden; }
+.pp-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.pp-card:hover .pp-card__img { transform: scale(1.04); }
+.pp-card__tag { position: absolute; top: 14px; right: 14px; padding: 5px 14px; background: var(--navy); color: var(--gold-light); border-radius: 3px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+
+.pp-card__body { padding: 20px 22px 24px; }
+.pp-card__price { font-family: var(--font-serif); font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.pp-card__address { font-size: 14px; color: var(--text-dark); font-weight: 600; }
+.pp-card__city { font-size: 12.5px; color: var(--text-muted); margin-bottom: 14px; }
+.pp-card__specs { display: flex; gap: 18px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 11.5px; color: var(--text-muted); font-weight: 600; }
+.pp-card__specs span { display: block; font-size: 15px; font-weight: 700; color: var(--navy); }
+
+@media (max-width: 900px) { .pp-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .pp-grid { grid-template-columns: 1fr; } .pp-stat-row { gap: 40px; } }

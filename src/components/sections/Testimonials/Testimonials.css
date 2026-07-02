@@ -1,0 +1,135 @@
+/* ─── Section shell — parallax background ──────────────── */
+.testimonials {
+  padding: 120px 0;
+}
+
+/* Override shared parallax overlay — rich navy so cards pop */
+.testimonials.parallax::before {
+  background: linear-gradient(
+    160deg,
+    rgba(8, 14, 28, 0.82) 0%,
+    rgba(8, 14, 28, 0.70) 100%
+  );
+}
+
+/* All content above parallax pseudo-element */
+.testimonials .container { position: relative; z-index: 2; }
+
+/* Subtitle on dark bg */
+.testimonials .section-sub { color: rgba(255, 255, 255, 0.65); }
+
+/* ─── Carousel ─────────────────────────────────────────── */
+.t-carousel__wrap { overflow: hidden; margin-top: 56px; }
+.t-carousel__track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.t-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ─── Glassmorphism card ────────────────────────────────── */
+.t-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 2px solid rgba(184, 151, 58, 0.55);
+  padding: 36px 32px;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.t-card:hover {
+  background: rgba(255, 255, 255, 0.11);
+  border-top-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+/* Large decorative quote mark */
+.t-card__quote {
+  position: absolute;
+  top: 10px; right: 22px;
+  font-family: var(--font-serif);
+  font-size: 100px;
+  color: rgba(184, 151, 58, 0.18);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.t-card__stars {
+  color: var(--gold-light);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.t-card__text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.85;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.t-card__author { display: flex; align-items: center; gap: 13px; }
+
+.t-card__avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(184, 151, 58, 0.20);
+  border: 1px solid rgba(184, 151, 58, 0.45);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 16px; color: var(--gold-light);
+  font-weight: 700; flex-shrink: 0;
+}
+
+.t-card__name { font-size: 13.5px; font-weight: 700; color: #fff; }
+.t-card__role { font-size: 10px; color: rgba(255,255,255,0.50); text-transform: uppercase; letter-spacing: 1.2px; margin-top: 2px; }
+
+/* ─── Controls ──────────────────────────────────────────── */
+.t-carousel__ctrl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 44px;
+}
+
+.t-carousel__btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(184, 151, 58, 0.55);
+  background: rgba(184, 151, 58, 0.08);
+  color: var(--gold-light);
+  font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  backdrop-filter: blur(4px);
+}
+.t-carousel__btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+
+.t-carousel__dots { display: flex; gap: 8px; }
+.t-carousel__dot {
+  width: 8px; height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+}
+.t-carousel__dot--on { background: var(--gold); width: 24px; }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px)  { .t-slide { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .t-slide { grid-template-columns: 1fr; } }

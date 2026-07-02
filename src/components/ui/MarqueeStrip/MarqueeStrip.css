@@ -1,0 +1,178 @@
+/* ─── Outer wrapper — clips overflow ───────────────────── */
+.marquee-strip {
+  background: var(--bg-cream);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fade edges left & right */
+.marquee-strip::before,
+.marquee-strip::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-strip::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-cream) 0%, transparent 100%);
+}
+.marquee-strip::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-cream) 0%, transparent 100%);
+}
+
+/* ─── Scrolling track ───────────────────────────────────── */
+.marquee-strip__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee-scroll 24s linear infinite;
+}
+.marquee-strip__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-12.5%); }
+}
+
+/* ─── Each item ─────────────────────────────────────────── */
+.marquee-strip__item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.marquee-strip__sep {
+  width: 1px;
+  height: 44px;
+  background: var(--border);
+  margin: 0 48px;
+  flex-shrink: 0;
+}
+
+/* ─── Badge base ────────────────────────────────────────── */
+.marquee-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.marquee-badge__top {
+  display: block;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+.marquee-badge__btm {
+  display: block;
+  font-weight: 500;
+  color: var(--text-mid);
+  line-height: 1;
+}
+
+/* ─── Variant: serif-stack (like WD REALTY in SS) ────────── */
+.marquee-badge--serif-stack .marquee-badge__top {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--navy);
+}
+.marquee-badge--serif-stack .marquee-badge__btm {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+}
+
+/* ─── Variant: realtor — oversized single word ─────────── */
+.marquee-badge--realtor .marquee-badge__top {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+}
+
+/* ─── Variant: badge — two-line pill style ──────────────── */
+.marquee-badge--badge {
+  background: var(--navy);
+  border-radius: 4px;
+  padding: 9px 20px;
+  gap: 3px;
+}
+.marquee-badge--badge .marquee-badge__top {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+}
+.marquee-badge--badge .marquee-badge__btm {
+  font-size: 8.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.60);
+  font-family: var(--font-sans);
+}
+
+/* ─── Variant: cert — small stacked credential ──────────── */
+.marquee-badge--cert .marquee-badge__top {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+.marquee-badge--cert .marquee-badge__btm {
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-family: var(--font-sans);
+}
+
+/* ─── Variant: img-logo — full KW Reserve logo ─────────── */
+.marquee-badge--img-logo {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 18px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+.marquee-badge__img {
+  height: 40px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ─── Variant: img-card — BIZZ card thumbnail ───────────── */
+.marquee-badge--img-card {
+  display: flex;
+  align-items: center;
+}
+.marquee-badge__card-img {
+  height: 56px;
+  width: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+  display: block;
+  border: 1px solid var(--border);
+}

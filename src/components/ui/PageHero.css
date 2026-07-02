@@ -1,0 +1,60 @@
+.page-hero {
+  min-height: 56vh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--nav-h) + 56px);
+  padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+  .page-hero { padding-top: calc(var(--nav-h) + 40px); }
+}
+
+/* Override the shared parallax overlay to give page heroes their own tints */
+.page-hero--overlay-dark.parallax::before {
+  background: linear-gradient(160deg, rgba(12, 20, 35, 0.88) 0%, rgba(12, 20, 35, 0.52) 100%);
+}
+.page-hero--overlay-left.parallax::before {
+  background: linear-gradient(to right, rgba(12, 20, 35, 0.92) 0%, rgba(12, 20, 35, 0.35) 100%);
+}
+
+.page-hero__body {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.page-hero__eyebrow {
+  font-size: 10px;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.page-hero__eyebrow::before {
+  content: '';
+  width: 36px; height: 1px;
+  background: var(--gold);
+  display: block;
+  flex-shrink: 0;
+}
+
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 62px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.page-hero__sub {
+  font-size: 16.5px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.72;
+  font-weight: 300;
+  max-width: 560px;
+}

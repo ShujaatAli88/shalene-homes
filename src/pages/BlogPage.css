@@ -1,0 +1,32 @@
+.bp-section { padding: 80px 0 100px; background: var(--bg-light); }
+
+.bp-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 48px; }
+.bp-filter {
+  padding: 9px 22px; border: 2px solid var(--border); border-radius: 100px;
+  background: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; cursor: pointer; color: var(--text-dark); transition: all 0.25s;
+}
+.bp-filter:hover { border-color: var(--gold); color: var(--gold); }
+.bp-filter--active { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+.bp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+.bp-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.06); transition: transform 0.3s, box-shadow 0.3s; }
+.bp-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(0,0,0,.10); }
+.bp-card--featured { grid-column: span 2; }
+
+.bp-card__img-wrap { position: relative; padding-top: 56%; overflow: hidden; }
+.bp-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.bp-card:hover .bp-card__img { transform: scale(1.04); }
+.bp-card__cat { position: absolute; top: 14px; left: 14px; padding: 5px 14px; background: var(--gold); color: #fff; border-radius: 3px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+
+.bp-card__body { padding: 24px 24px 28px; }
+.bp-card__meta { font-size: 11.5px; color: var(--text-muted); letter-spacing: 0.3px; margin-bottom: 10px; }
+.bp-card__title { font-family: var(--font-serif); font-size: 19px; color: var(--navy); font-weight: 700; line-height: 1.35; margin-bottom: 12px; }
+.bp-card--featured .bp-card__title { font-size: 24px; }
+.bp-card__excerpt { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin-bottom: 18px; }
+.bp-card__cta { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+.bp-card__cta:hover { color: var(--navy); }
+
+@media (max-width: 900px) { .bp-grid { grid-template-columns: 1fr 1fr; } .bp-card--featured { grid-column: span 2; } }
+@media (max-width: 600px) { .bp-grid { grid-template-columns: 1fr; } .bp-card--featured { grid-column: span 1; } }

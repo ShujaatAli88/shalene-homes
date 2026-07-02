@@ -1,0 +1,56 @@
+/* ─── Section shell — video sits absolutely inside ─────── */
+.valuation {
+  position: relative;
+  padding: 140px 0;
+  overflow: hidden;
+}
+
+/* Fullscreen background video */
+.valuation__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Cinematic overlay — darker center-bottom so text pops, lighter top */
+.valuation__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to bottom, rgba(8,14,28,0.45) 0%, rgba(8,14,28,0.82) 100%),
+    rgba(8, 14, 28, 0.20);
+}
+
+/* All content above video */
+.valuation .container { position: relative; z-index: 2; }
+
+.valuation__inner {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.valuation__inner p {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  margin: 20px 0 44px;
+  font-weight: 300;
+}
+
+.valuation__btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Pill style to match hero buttons */
+.valuation__btns .btn {
+  border-radius: 50px;
+  padding: 16px 38px;
+}

@@ -1,0 +1,33 @@
+.np-section { padding: 80px 0 100px; background: var(--bg-light); }
+
+.np-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+
+.np-card { background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.06); transition: transform 0.3s, box-shadow 0.3s; }
+.np-card--featured { grid-column: span 2; }
+.np-card:hover { transform: translateY(-5px); box-shadow: 0 14px 44px rgba(0,0,0,.10); }
+
+.np-card__img-wrap { position: relative; padding-top: 62%; overflow: hidden; }
+.np-card--featured .np-card__img-wrap { padding-top: 55%; }
+.np-card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.np-card:hover .np-card__img { transform: scale(1.04); }
+.np-card__overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(12,20,35,.82) 0%, transparent 100%);
+  padding: 28px 24px 20px;
+}
+.np-card__name { font-family: var(--font-serif); font-size: 24px; color: #fff; font-weight: 700; margin-bottom: 4px; }
+.np-card--featured .np-card__name { font-size: 32px; }
+.np-card__tagline { font-size: 11px; color: var(--gold-light); letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; }
+
+.np-card__body { padding: 24px; }
+.np-card__desc { font-size: 14.5px; color: var(--text-muted); line-height: 1.72; margin-bottom: 18px; }
+.np-card__highlights { margin: 0 0 20px; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.np-card__highlights li { font-size: 13px; color: var(--text-dark); padding-left: 18px; position: relative; }
+.np-card__highlights li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+.np-card__stats { display: flex; gap: 24px; padding: 16px 0; border-top: 1px solid var(--border); margin-bottom: 20px; }
+.np-stat { text-align: center; flex: 1; }
+.np-stat span { display: block; font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+.np-stat { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); font-weight: 600; }
+
+@media (max-width: 900px) { .np-grid { grid-template-columns: 1fr; } .np-card--featured { grid-column: span 1; } }

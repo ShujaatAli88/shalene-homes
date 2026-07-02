@@ -1,0 +1,178 @@
+/* ─── Parallax overlay ───────────────────────────────────── */
+.contact.parallax::before {
+  background:
+    linear-gradient(to bottom, rgba(5,10,20,0.55) 0%, transparent 20%),
+    linear-gradient(to top,    rgba(5,10,20,0.60) 0%, transparent 25%),
+    rgba(5,10,20,0.52);
+}
+
+.contact {
+  padding: 130px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Centered content block ────────────────────────────── */
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 620px;
+  width: 100%;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Agent avatar ───────────────────────────────────────── */
+.contact__avatar-wrap {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  margin-bottom: 32px;
+  flex-shrink: 0;
+}
+.contact__avatar {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 6px rgba(184,151,58,0.15), 0 16px 48px rgba(0,0,0,0.50);
+  position: relative;
+  z-index: 1;
+}
+.contact__avatar-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1px solid rgba(184,151,58,0.22);
+  animation: avatar-pulse 3s ease-in-out infinite;
+}
+@keyframes avatar-pulse {
+  0%, 100% { transform: scale(1);    opacity: 1; }
+  50%       { transform: scale(1.06); opacity: 0.5; }
+}
+
+/* ─── Eyebrow ───────────────────────────────────────────── */
+.contact__cta-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 9px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gold-light);
+  white-space: nowrap;
+}
+.contact__eyebrow-rule {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold));
+  flex-shrink: 0;
+}
+.contact__cta-eyebrow span:last-child {
+  background: linear-gradient(to left, transparent, var(--gold));
+}
+
+/* ─── Headline ───────────────────────────────────────────── */
+.contact__cta-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 7vw, 80px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.0;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+/* ─── Sub-text ───────────────────────────────────────────── */
+.contact__cta-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.80;
+  font-weight: 300;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+/* ─── Value props row ────────────────────────────────────── */
+.contact__props {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.contact__prop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact__prop-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+.contact__prop-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.58);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* ─── CTA button ─────────────────────────────────────────── */
+.contact__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 52px;
+  background: var(--gold);
+  color: var(--navy);
+  text-decoration: none;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.25s, box-shadow 0.3s;
+  box-shadow: 0 8px 40px rgba(184,151,58,0.45);
+  margin-bottom: 28px;
+}
+.contact__cta-btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 56px rgba(184,151,58,0.35);
+}
+.contact__cta-arrow {
+  font-size: 18px;
+  font-weight: 400;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+.contact__cta-btn:hover .contact__cta-arrow { transform: translateX(6px); }
+
+/* ─── Agent name tag ────────────────────────────────────── */
+.contact__agent-tag {
+  font-size: 9.5px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+  font-weight: 600;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .contact { padding: 100px 0; }
+  .contact__props { gap: 16px; flex-direction: column; }
+  .contact__cta-btn { padding: 18px 40px; }
+}
