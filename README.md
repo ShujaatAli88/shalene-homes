@@ -106,9 +106,9 @@ export const agent = {
   title:    'Licensed REALTOR',
   license:  'FL-BK3421897',
   brokerage:'KW Reserve',
-  phone:    '(562) 371-9555',
-  email:    'shalene@youlivingforward.com',
-  photo:    '/Shalene Enhanced Image.jpg',
+  phone:    'example number',
+  email:    'example@gmail.com',
+  photo:    'example',
   ...
 }
 ```
