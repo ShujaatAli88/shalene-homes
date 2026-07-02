@@ -54,3 +54,15 @@
   border-radius: 50px;
   padding: 16px 38px;
 }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .valuation { padding: 90px 0; }
+  .valuation__inner p { font-size: 15.5px; }
+}
+@media (max-width: 480px) {
+  .valuation { padding: 70px 0; }
+  .valuation__inner p { font-size: 15px; margin-bottom: 32px; }
+  .valuation__btns { flex-direction: column; align-items: center; }
+  .valuation__btns .btn { width: 100%; max-width: 280px; padding: 14px 32px; }
+}

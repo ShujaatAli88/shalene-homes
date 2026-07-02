@@ -56,3 +56,15 @@
 .lp-card__specs span { display: block; font-size: 16px; font-weight: 700; color: var(--navy); }
 
 .lp-empty { text-align: center; color: var(--text-muted); font-size: 16px; padding: 60px 0; }
+
+@media (max-width: 768px) {
+  .lp-section { padding: 60px 0 80px; }
+  .lp-grid { gap: 20px; }
+  .lp-filters { margin-bottom: 32px; gap: 8px; }
+  .lp-filter { padding: 8px 18px; }
+}
+@media (max-width: 480px) {
+  .lp-grid { grid-template-columns: 1fr; gap: 16px; }
+  .lp-card__body { padding: 18px 18px 22px; }
+  .lp-card__specs { gap: 14px; }
+}

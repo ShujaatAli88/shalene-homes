@@ -176,3 +176,16 @@
   display: block;
   border: 1px solid var(--border);
 }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .marquee-strip { padding: 18px 0; }
+  .marquee-strip::before,
+  .marquee-strip::after { width: 60px; }
+  .marquee-strip__sep { margin: 0 28px; height: 32px; }
+  .marquee-badge--serif-stack .marquee-badge__top { font-size: 18px; }
+  .marquee-badge--realtor .marquee-badge__top { font-size: 22px; }
+  .marquee-badge--badge { padding: 7px 14px; }
+  .marquee-badge__img { height: 32px; }
+  .marquee-badge__card-img { height: 44px; width: 44px; }
+}

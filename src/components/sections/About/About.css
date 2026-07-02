@@ -393,7 +393,11 @@
   .about__frame-br { right: 0; }
 }
 @media (max-width: 640px) {
+  .about { padding: 90px 0; }
   .about__headline { font-size: 36px; }
   .about__stats { grid-template-columns: repeat(2, 1fr); }
   .about__watermark { font-size: 100px; }
+  .about__photo { height: 300px; }
+  .about__name-card { padding: 16px 20px 20px; }
+  .about__bizz-wrap { width: 86px; right: -8px; }
 }

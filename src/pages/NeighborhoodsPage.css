@@ -30,4 +30,14 @@
 .np-stat span { display: block; font-family: var(--font-serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
 .np-stat { font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); font-weight: 600; }
 
-@media (max-width: 900px) { .np-grid { grid-template-columns: 1fr; } .np-card--featured { grid-column: span 1; } }
+@media (max-width: 900px) {
+  .np-grid { grid-template-columns: 1fr; }
+  .np-card--featured { grid-column: span 1; }
+}
+@media (max-width: 640px) {
+  .np-section { padding: 60px 0 80px; }
+  .np-grid { gap: 20px; }
+  .np-card--featured .np-card__name { font-size: 26px; }
+  .np-card__body { padding: 18px; }
+  .np-card__stats { gap: 16px; }
+}
