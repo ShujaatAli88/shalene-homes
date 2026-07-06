@@ -36,8 +36,8 @@ export default function SocialIcons({ links = {} }) {
     <div style={{ display: 'flex', gap: '9px', flexWrap: 'wrap' }}>
       {Object.entries(links).map(([key, href]) =>
         icons[key] && href !== '#' ? (
-          <a key={key} href={href} className="social-icon" title={key} aria-label={key}
-             target="_blank" rel="noopener noreferrer">
+          <a key={key} href={href} className="social-icon" data-platform={key}
+             title={key} aria-label={key} target="_blank" rel="noopener noreferrer">
             {icons[key]}
           </a>
         ) : null

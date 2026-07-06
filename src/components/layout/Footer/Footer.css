@@ -81,6 +81,20 @@
   opacity: 0.95;
 }
 
+/* ── Social icons ─────────────────────────────── */
+.footer__social {
+  margin-top: 20px;
+}
+.footer__social .social-icon {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  width: 36px;
+  height: 36px;
+}
+.footer__social .social-icon:hover {
+  border-color: transparent;
+}
+
 /* ── Teal dividers ────────────────────────────── */
 .footer__gold-hr {
   width: 100%;

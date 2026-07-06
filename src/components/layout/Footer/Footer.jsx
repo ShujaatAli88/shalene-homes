@@ -1,6 +1,7 @@
 import './Footer.css'
 import { Link } from 'react-router-dom'
 import { agent } from '../../../data/agent'
+import SocialIcons from '../../ui/SocialIcons'
 
 const NAV_LINKS = [
   { label: 'Portfolio',      to: '/portfolio' },
@@ -62,6 +63,9 @@ export default function Footer() {
             </div>
             <h2 className="footer__brand-name">{agent.name}</h2>
             <p className="footer__brand-tag">{agent.brokerage} &nbsp;·&nbsp; Palm Beach County, Florida</p>
+            <div className="footer__social">
+              <SocialIcons links={agent.social} />
+            </div>
           </div>
           <div className="footer__brand-right">
             <img

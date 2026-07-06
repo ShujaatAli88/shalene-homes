@@ -159,11 +159,22 @@ ul    { list-style: none; }
   border-radius: 50%;
   background: var(--navy);
   display: flex; align-items: center; justify-content: center;
-  transition: background 0.25s;
+  transition: background 0.28s, transform 0.2s;
   flex-shrink: 0;
 }
-.social-icon:hover { background: var(--gold); }
+.social-icon:hover { transform: translateY(-2px); }
 .social-icon svg  { width: 15px; height: 15px; fill: #fff; display: block; }
+
+/* Per-platform brand colors on hover */
+.social-icon[data-platform="facebook"]:hover  { background: #1877F2; }
+.social-icon[data-platform="instagram"]:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.social-icon[data-platform="linkedin"]:hover  { background: #0A66C2; }
+.social-icon[data-platform="youtube"]:hover   { background: #FF0000; }
+.social-icon[data-platform="zillow"]:hover    { background: #006AFF; }
+.social-icon[data-platform="google"]:hover    { background: #fff; }
+.social-icon[data-platform="google"]:hover svg { fill: #4285F4; }
 
 /* ─── Responsive ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
