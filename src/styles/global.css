@@ -173,8 +173,11 @@ ul    { list-style: none; }
 .social-icon[data-platform="linkedin"]:hover  { background: #0A66C2; }
 .social-icon[data-platform="youtube"]:hover   { background: #FF0000; }
 .social-icon[data-platform="zillow"]:hover    { background: #006AFF; }
-.social-icon[data-platform="google"]:hover    { background: #fff; }
-.social-icon[data-platform="google"]:hover svg { fill: #4285F4; }
+.social-icon[data-platform="google"]:hover                    { background: #fff; }
+.social-icon[data-platform="google"]:hover .g-blue            { fill: #4285F4; }
+.social-icon[data-platform="google"]:hover .g-green           { fill: #34A853; }
+.social-icon[data-platform="google"]:hover .g-yellow          { fill: #FBBC05; }
+.social-icon[data-platform="google"]:hover .g-red             { fill: #EA4335; }
 
 /* ─── Responsive ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
