@@ -38,12 +38,18 @@
   z-index: 1;
 }
 
+.footer__brand-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__brand-logo {
   height: 200px;
   width: 200px;
   display: block;
   object-fit: contain;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .footer__kw-logo {
@@ -54,7 +60,9 @@
 
 /* ── Social icons ─────────────────────────────── */
 .footer__social {
-  margin-top: 20px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
 }
 .footer__social .social-icon {
   background: rgba(255,255,255,0.08);
