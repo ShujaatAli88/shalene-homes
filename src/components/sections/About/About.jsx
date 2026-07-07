@@ -114,15 +114,6 @@ export default function About() {
               />
             </div>
 
-            {/* BIZZ card */}
-            <div className="about__bizz-wrap">
-              <img
-                src="/_BIZZ card  @ KW Reserve (3000 x 3000 px).png"
-                alt="KW Reserve Business Card"
-                className="about__bizz-card"
-              />
-            </div>
-
             {/* License + social */}
             <div className="about__info-row">
               <div className="about__info-lic">

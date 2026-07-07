@@ -6,16 +6,6 @@ const BADGES = [
     alt: 'Keller Williams Reserve',
     style: 'img-logo',
   },
-  {
-    src: '/_BIZZ card  @ KW Reserve (3000 x 3000 px).png',
-    alt: 'KW Reserve',
-    style: 'img-card',
-  },
-  {
-    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGq7jqmNu0xTI87MQTuyQA8PqTue3vNWb_coyBxk3uGQ&s=10',
-    alt: 'Top Agent on Zillow',
-    style: 'img-logo',
-  },
 ]
 
 export default function MarqueeStrip() {
