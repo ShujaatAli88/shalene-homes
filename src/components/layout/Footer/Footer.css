@@ -39,8 +39,8 @@
 }
 
 .footer__brand-logo {
-  height: 140px;
-  width: auto;
+  height: 200px;
+  width: 200px;
   display: block;
   object-fit: contain;
   margin-bottom: 8px;
