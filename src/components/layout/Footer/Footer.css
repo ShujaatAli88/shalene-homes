@@ -39,11 +39,11 @@
 }
 
 .footer__brand-logo {
-  height: 80px;
+  height: 140px;
   width: auto;
   display: block;
   object-fit: contain;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .footer__kw-logo {

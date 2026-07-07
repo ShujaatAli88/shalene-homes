@@ -63,15 +63,13 @@
   flex-shrink: 0;
 }
 .navbar__logo-img {
-  height: 48px;
+  height: 58px;
   width: auto;
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /* drop-shadow so the logo pops on both glass and solid navbar */
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
   transition: filter 0.4s;
-}
-.navbar--solid .navbar__logo-img {
-  filter: none;
 }
 
 /* ─── Vertical divider between logo and links ──────────── */
