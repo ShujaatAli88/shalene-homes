@@ -38,41 +38,12 @@
   z-index: 1;
 }
 
-.footer__brand-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 8.5px;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-.footer__brand-rule {
+.footer__brand-logo {
+  height: 80px;
+  width: auto;
   display: block;
-  width: 32px;
-  height: 1px;
-  background: var(--gold);
-  flex-shrink: 0;
-}
-
-.footer__brand-name {
-  font-family: var(--font-serif);
-  font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 300;
-  color: #fff;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-  line-height: 1.1;
-}
-
-.footer__brand-tag {
-  font-size: 10.5px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  font-weight: 600;
+  object-fit: contain;
+  margin-bottom: 4px;
 }
 
 .footer__kw-logo {

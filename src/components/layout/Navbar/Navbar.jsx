@@ -49,8 +49,11 @@ export default function Navbar() {
 
             {/* Logo */}
             <Link to="/" className="navbar__logo">
-              <span className="navbar__logo-name">{agent.name}</span>
-              <span className="navbar__logo-tag">{agent.tagline}</span>
+              <img
+                src="/shalene-logo.png"
+                alt={agent.name}
+                className="navbar__logo-img"
+              />
             </Link>
 
             {/* Vertical divider */}

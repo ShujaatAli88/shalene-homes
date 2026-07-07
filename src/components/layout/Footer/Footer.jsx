@@ -57,12 +57,11 @@ export default function Footer() {
         {/* ── Brand row ────────────────────────────────── */}
         <div className="footer__brand-row">
           <div className="footer__brand-left">
-            <div className="footer__brand-eyebrow">
-              <span className="footer__brand-rule" />
-              <span>Licensed REALTOR®</span>
-            </div>
-            <h2 className="footer__brand-name">{agent.name}</h2>
-            <p className="footer__brand-tag">{agent.brokerage} &nbsp;·&nbsp; Palm Beach County, Florida</p>
+            <img
+              src="/shalene-logo.png"
+              alt={agent.name}
+              className="footer__brand-logo"
+            />
             <div className="footer__social">
               <SocialIcons links={agent.social} />
             </div>
