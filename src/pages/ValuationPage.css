@@ -8,7 +8,7 @@
 .vp-step__desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
 .vp-form-section { padding: 100px 0; }
-.vp-form-section.parallax::before { background: rgba(12, 20, 35, 0.82); }
+.vp-form-section.parallax::before { background: rgba(22, 32, 50, 0.68); }
 
 .vp-form-wrap { max-width: 760px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,.18); }
 .vp-form-header { padding: 40px 48px 0; }

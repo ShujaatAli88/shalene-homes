@@ -6,6 +6,16 @@ import { agent } from '../../../data/agent'
 const NAV_ITEMS = [
   { label: 'Portfolio',      path: '/portfolio' },
   { label: 'Neighborhoods',  path: '/neighborhoods' },
+  {
+    label: 'Area Vibes',
+    path: '/neighborhoods',
+    children: [
+      { label: 'Martin County',        path: '/neighborhoods' },
+      { label: 'Okeechobee County',    path: '/neighborhoods' },
+      { label: 'Palm Beaches County',  path: '/neighborhoods' },
+      { label: 'St. Lucie County',     path: '/neighborhoods' },
+    ],
+  },
   { label: 'Home Search',    path: '/listings' },
   { label: 'Home Valuation', path: '/valuation' },
   { label: 'About', path: '/about' },
@@ -14,6 +24,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
+  const [mobileSubmenu, setMobileSubmenu] = useState(null)
   const location = useLocation()
 
   const isHome      = location.pathname === '/'
@@ -25,7 +36,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => { setMenuOpen(false) }, [location.pathname])
+  useEffect(() => { setMenuOpen(false); setMobileSubmenu(null) }, [location.pathname])
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
@@ -104,15 +115,46 @@ export default function Navbar() {
       {/* Mobile overlay */}
       <div className={`mobile-nav${menuOpen ? ' mobile-nav--open' : ''}`} aria-hidden={!menuOpen}>
         <button className="mobile-nav__close" onClick={() => setMenuOpen(false)}>✕</button>
-        <Link to="/" className="mobile-nav__link" onClick={() => setMenuOpen(false)}>Home</Link>
-        {NAV_ITEMS.map((item) => (
-          <Link key={item.label} to={item.path} className="mobile-nav__link" onClick={() => setMenuOpen(false)}>
-            {item.label}
-          </Link>
-        ))}
-        <Link to="/contact" className="mobile-nav__cta" onClick={() => setMenuOpen(false)}>
-          Let's Connect
-        </Link>
+
+        {mobileSubmenu ? (
+          <div className="mobile-nav__panel">
+            <button className="mobile-nav__back" onClick={() => setMobileSubmenu(null)}>
+              <span className="mobile-nav__back-arrow">‹</span> {mobileSubmenu.label}
+            </button>
+            {mobileSubmenu.children.map((c) => (
+              <Link
+                key={c.label}
+                to={c.path}
+                className="mobile-nav__link mobile-nav__link--sub"
+                onClick={() => setMenuOpen(false)}
+              >
+                {c.label}
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="mobile-nav__panel">
+            <Link to="/" className="mobile-nav__link" onClick={() => setMenuOpen(false)}>Home</Link>
+            {NAV_ITEMS.map((item) => (
+              item.children ? (
+                <button
+                  key={item.label}
+                  className="mobile-nav__link mobile-nav__link--expand"
+                  onClick={() => setMobileSubmenu(item)}
+                >
+                  {item.label} <span className="mobile-nav__expand-arrow">›</span>
+                </button>
+              ) : (
+                <Link key={item.label} to={item.path} className="mobile-nav__link" onClick={() => setMenuOpen(false)}>
+                  {item.label}
+                </Link>
+              )
+            ))}
+            <Link to="/contact" className="mobile-nav__cta" onClick={() => setMenuOpen(false)}>
+              Let's Connect
+            </Link>
+          </div>
+        )}
       </div>
     </>
   )

@@ -28,15 +28,15 @@
   z-index: 1;
   background:
     /* top gradient — navbar area */
-    linear-gradient(to bottom, rgba(5,10,20,0.55) 0%, transparent 22%),
+    linear-gradient(to bottom, rgba(30,42,62,0.32) 0%, transparent 22%),
     /* bottom gradient — buttons area */
-    linear-gradient(to top,    rgba(5,10,20,0.60) 0%, transparent 28%),
+    linear-gradient(to top,    rgba(30,42,62,0.36) 0%, transparent 28%),
     /* left vignette */
-    linear-gradient(to right,  rgba(5,10,20,0.45) 0%, transparent 28%),
+    linear-gradient(to right,  rgba(30,42,62,0.26) 0%, transparent 28%),
     /* right vignette */
-    linear-gradient(to left,   rgba(5,10,20,0.45) 0%, transparent 28%),
+    linear-gradient(to left,   rgba(30,42,62,0.26) 0%, transparent 28%),
     /* very faint overall tint so white text is always readable */
-    rgba(5, 10, 20, 0.22);
+    rgba(30, 42, 62, 0.10);
 }
 
 /* ─── Content ──────────────────────────────────────────── */

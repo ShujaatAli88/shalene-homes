@@ -6,7 +6,7 @@ import './AboutPage.css'
 const TIMELINE = [
   { year: '2009', title: 'Licensed in Florida',   desc: 'Obtained Florida Real Estate license and joined Coldwell Banker Realty, beginning a career defined by dedication.' },
   { year: '2012', title: 'Top 10% Palm Beach',    desc: 'Ranked in the top 10% of agents in Palm Beach County by closed volume — just three years into her career.' },
-  { year: '2015', title: 'CLHMS Designation',     desc: 'Earned the Certified Luxury Home Marketing Specialist designation, opening the door to Palm Beach\'s finest estates.' },
+  { year: '2015', title: 'GRI Designation',       desc: 'Earned the Graduate, REALTOR® Institute (GRI) designation, deepening her expertise across every facet of the transaction.' },
   { year: '2018', title: '$500M Milestone',        desc: 'Surpassed $500M in career closed transactions — a testament to relentless client-first focus.' },
   { year: '2021', title: 'Top 1% Nationally',     desc: 'Recognized as a top 1% agent nationally by the National Association of REALTORS®.' },
   { year: '2024', title: '$2.4B Total Volume',    desc: 'Lifetime closed transaction volume surpasses $2.4 billion across all price points and neighborhoods.' },
@@ -18,21 +18,21 @@ const TABS = [
     label: 'My Story',
     content: agent.bio[0] + ' ' + agent.bio[1],
     highlight: '15+',
-    highlightLabel: 'Years in Palm Beach',
+    highlightLabel: 'Years of Experience',
   },
   {
     id: 'approach',
     label: 'My Approach',
-    content: 'Every transaction is treated as a strategic investment. Shalene\'s background in finance and corporate strategy means she evaluates risk, timing, and market conditions with the precision of a seasoned analyst — while always keeping your goals at the center of every decision.',
+    content: agent.bio[2],
     highlight: '98%',
     highlightLabel: 'Client Satisfaction',
   },
   {
     id: 'community',
     label: 'My Community',
-    content: agent.bio[2] + ' Shalene is deeply embedded in the social and philanthropic fabric of Palm Beach County — from charitable galas to local housing advocacy. Her roots run deep, and her clients benefit from a network built over two decades.',
-    highlight: '20+',
-    highlightLabel: 'Years as a Resident',
+    content: agent.bio[3],
+    highlight: '4',
+    highlightLabel: 'Counties Served',
   },
 ]
 

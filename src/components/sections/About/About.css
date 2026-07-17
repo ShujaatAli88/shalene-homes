@@ -1,14 +1,23 @@
 ﻿/* ═══════════════════════════════════════════
    ABOUT — parallax + cinematic overlay
 ═══════════════════════════════════════════ */
-.about { padding: 130px 0; position: relative; overflow: hidden; }
+.about { padding: 130px 0; position: relative; overflow: clip; background: #1a2c47; }
 
-.about.parallax::before {
-  background:
-    linear-gradient(to right,
-      rgba(5,10,20,0.97) 0%,
-      rgba(5,10,20,0.88) 48%,
-      rgba(5,10,20,0.18) 100%);
+/* ── Full-bleed background ─── */
+.about__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.about__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 44, 71, 0.68);
+  z-index: 1;
 }
 
 /* ── Watermark ─────────────────────────────── */
@@ -37,6 +46,8 @@
   position: relative;
   z-index: 2;
 }
+.about > .container { position: relative; z-index: 2; padding-left: 80px !important; padding-right: 60px !important; }
+.about__text { padding-left: 0; }
 
 /* ═══════════════════════════════════════════
    LEFT TEXT SIDE
@@ -208,6 +219,7 @@
 .about__card-wrap {
   position: relative;
   padding: 20px 0 0 20px;
+  background: #101d33;
 }
 
 /* Decorative corner frames */
@@ -235,6 +247,7 @@
 .about__photo-frame {
   position: relative;
   padding-bottom: 48px;
+  background: #101d33;
 }
 .about__photo {
   width: 100%;
@@ -243,16 +256,16 @@
   object-position: center top;
   display: block;
   box-shadow: 0 32px 80px rgba(0,0,0,0.55);
+  -webkit-mask-image: radial-gradient(ellipse 48% 62% at 50% 36%, black 10%, rgba(0,0,0,0.75) 38%, rgba(0,0,0,0.1) 58%, transparent 74%);
+  mask-image:         radial-gradient(ellipse 48% 62% at 50% 36%, black 10%, rgba(0,0,0,0.75) 38%, rgba(0,0,0,0.1) 58%, transparent 74%);
 }
 .about__photo-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 50%,
-    rgba(5,10,20,0.30) 80%,
-    rgba(5,10,20,0.60) 100%
-  );
+  background:
+    radial-gradient(ellipse 38% 50% at 50% 34%, transparent 0%, transparent 28%, rgba(16,27,46,0.90) 68%),
+    linear-gradient(to bottom, rgba(16,27,46,0.48) 0%, transparent 18%, rgba(16,27,46,0.64) 100%);
+  z-index: 2;
 }
 
 /* Navy "Meet" overlay card */
@@ -378,11 +391,13 @@
 /* ── Responsive ────────────────────────────── */
 @media (max-width: 1100px) {
   .about__grid { grid-template-columns: 1fr; gap: 64px; }
-  .about.parallax::before { background: rgba(5,10,20,0.92); }
+  .about.parallax::before { background: rgba(26,44,71,0.68); }
   .about__stats { grid-template-columns: repeat(2, 1fr); }
   .about__stat:nth-child(2) { border-right: none; }
   .about__name-card { left: 0; right: 0; }
   .about__frame-br { right: 0; }
+  .about > .container { padding-left: 40px !important; padding-right: 40px !important; }
+  .about__text { padding-left: 20px !important; }
 }
 @media (max-width: 640px) {
   .about { padding: 90px 0; }
@@ -392,4 +407,6 @@
   .about__photo { height: 300px; }
   .about__name-card { padding: 16px 20px 20px; }
   .about__bizz-wrap { width: 86px; right: -8px; }
+  .about > .container { padding-left: 20px !important; padding-right: 20px !important; }
+  .about__text { padding-left: 0 !important; }
 }

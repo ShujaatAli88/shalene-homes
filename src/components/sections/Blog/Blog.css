@@ -2,9 +2,9 @@
 .blog.parallax::before {
   background: linear-gradient(
     160deg,
-    rgba(8, 14, 26, 0.82) 0%,
-    rgba(8, 14, 26, 0.68) 50%,
-    rgba(8, 14, 26, 0.78) 100%
+    rgba(20, 30, 46, 0.68) 0%,
+    rgba(20, 30, 46, 0.54) 50%,
+    rgba(20, 30, 46, 0.64) 100%
   );
 }
 

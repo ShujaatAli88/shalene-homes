@@ -10,13 +10,9 @@ export default function About() {
   const ref = useScrollReveal()
 
   return (
-    <section
-      className="about parallax"
-      id="about"
-      style={{ backgroundImage: `url('${BG}')` }}
-      ref={ref}
-    >
-      {/* Decorative serif watermark */}
+    <section className="about" id="about" ref={ref}>
+      {/* Full-bleed background image — separate div avoids background-attachment bugs */}
+      <div className="about__bg" style={{ backgroundImage: `url('${BG}')` }} />
       <div className="about__watermark" aria-hidden="true">ABOUT</div>
 
       <div className="container">
@@ -62,8 +58,8 @@ export default function About() {
             <div className="about__creds">
               {[
                 { short: 'Licensed REALTOR®',      sub: 'State of Florida' },
-                { short: 'CLHMS',                  sub: 'Certified Luxury Specialist' },
-                { short: 'ABR®',                   sub: "Accredited Buyer's Rep" },
+                { short: 'GRI',                    sub: 'Graduate, REALTOR® Institute' },
+                { short: '15+ Years',               sub: 'Real Estate Experience' },
                 { short: 'Top 1%',                 sub: 'Palm Beach County' },
               ].map(c => (
                 <div key={c.short} className="about__cred-item">

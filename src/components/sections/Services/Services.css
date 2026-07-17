@@ -2,9 +2,9 @@
 .services.parallax::before {
   background: linear-gradient(
     135deg,
-    rgba(6, 12, 24, 0.90) 0%,
-    rgba(6, 12, 24, 0.74) 50%,
-    rgba(6, 12, 24, 0.84) 100%
+    rgba(30, 42, 62, 0.68) 0%,
+    rgba(30, 42, 62, 0.52) 50%,
+    rgba(30, 42, 62, 0.62) 100%
   );
 }
 

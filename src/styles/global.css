@@ -1,7 +1,7 @@
 ﻿/* ─── CSS Custom Properties ─────────────────────────────────────── */
 :root {
-  --navy:        #1c2940;
-  --navy-mid:    #2d3f5e;
+  --navy:        #34486a;
+  --navy-mid:    #48607f;
   --gold:        #00C4CC;
   --gold-light:  #33D0D5;
   --gold-pale:   #E0F7F8;
@@ -59,7 +59,7 @@ ul    { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(20, 30, 50, 0.58);
+  background: rgba(30, 42, 62, 0.44);
 }
 .parallax > .container { position: relative; z-index: 2; }
 

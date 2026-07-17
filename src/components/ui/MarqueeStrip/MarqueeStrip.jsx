@@ -7,12 +7,10 @@ const BADGES = [
     style: 'img-logo',
   },
   { style: 'badge',        top: 'GRI',    btm: 'Graduate REALTOR® Institute' },
-  { style: 'serif-stack',  top: 'ABR®',   btm: "Accredited Buyer's Rep" },
-  { style: 'cert',         top: 'CLHMS',  btm: 'Certified Luxury Specialist' },
   { style: 'realtor',      top: 'REALTOR®' },
   { style: 'serif-stack',  top: 'Top 1%', btm: 'Palm Beach County Agents' },
   { style: 'badge',        top: '15+',    btm: 'Years of Experience' },
-  { style: 'cert',         top: 'FL',     btm: 'License #BK3421897' },
+  { style: 'cert',         top: 'FL',     btm: 'License #SL3383171' },
 ]
 
 export default function MarqueeStrip() {

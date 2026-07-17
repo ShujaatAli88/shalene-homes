@@ -29,8 +29,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(5,10,20,0.95) 0%, rgba(5,10,20,0.75) 50%, rgba(5,10,20,0.20) 100%),
-    linear-gradient(to top, rgba(5,10,20,0.60) 0%, transparent 30%);
+    linear-gradient(to right, rgba(18,28,46,0.82) 0%, rgba(18,28,46,0.62) 50%, rgba(18,28,46,0.14) 100%),
+    linear-gradient(to top, rgba(18,28,46,0.46) 0%, transparent 30%);
 }
 
 /* Agent photo right side */
@@ -51,8 +51,8 @@
 .ap-hero__photo-fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(5,10,20,1) 0%, transparent 35%),
-              linear-gradient(to top, rgba(5,10,20,0.8) 0%, transparent 25%);
+  background: linear-gradient(to right, rgba(18,28,46,0.88) 0%, transparent 35%),
+              linear-gradient(to top, rgba(18,28,46,0.66) 0%, transparent 25%);
 }
 
 /* Left text content */
@@ -144,7 +144,7 @@
   z-index: 3;
   display: flex;
   align-items: center;
-  background: rgba(5,10,20,0.75);
+  background: rgba(18,28,46,0.68);
   backdrop-filter: blur(16px);
   border-top: 1px solid rgba(0,196,204,0.20);
   padding: 20px 64px;
@@ -439,7 +439,7 @@
 .ap-timeline__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5,10,20,0.88);
+  background: rgba(18,28,46,0.74);
 }
 .ap-timeline__inner { position: relative; z-index: 1; }
 
@@ -686,7 +686,7 @@
 @media (max-width: 860px) {
   .ap-hero__photo-wrap { display: none; }
   .ap-hero__content { max-width: 100%; }
-  .ap-hero__overlay { background: rgba(5,10,20,0.80); }
+  .ap-hero__overlay { background: rgba(18,28,46,0.68); }
   .ap-hero__stats { padding: 20px 24px; }
   .ap-hero__stat-num { font-size: 22px; }
   .ap-story__grid { grid-template-columns: 1fr; }
