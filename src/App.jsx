@@ -7,6 +7,7 @@ import ScrollToTop from './components/ui/ScrollToTop'
 import Home              from './pages/Home'
 import PortfolioPage     from './pages/PortfolioPage'
 import NeighborhoodsPage from './pages/NeighborhoodsPage'
+import AreaVibePage      from './pages/AreaVibePage'
 import ListingsPage      from './pages/ListingsPage'
 import ValuationPage     from './pages/ValuationPage'
 import AboutPage         from './pages/AboutPage'
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/"              element={<Home />} />
         <Route path="/portfolio"     element={<PortfolioPage />} />
         <Route path="/neighborhoods" element={<NeighborhoodsPage />} />
+        <Route path="/area-vibes/:slug" element={<AreaVibePage />} />
         <Route path="/listings"      element={<ListingsPage />} />
         <Route path="/valuation"     element={<ValuationPage />} />
         <Route path="/about"         element={<AboutPage />} />

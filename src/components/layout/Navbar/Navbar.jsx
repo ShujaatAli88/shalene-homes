@@ -8,12 +8,12 @@ const NAV_ITEMS = [
   { label: 'Neighborhoods',  path: '/neighborhoods' },
   {
     label: 'Area Vibes',
-    path: '/neighborhoods',
+    path: '/area-vibes/martin-county',
     children: [
-      { label: 'Martin County',        path: '/neighborhoods' },
-      { label: 'Okeechobee County',    path: '/neighborhoods' },
-      { label: 'Palm Beaches County',  path: '/neighborhoods' },
-      { label: 'St. Lucie County',     path: '/neighborhoods' },
+      { label: 'Martin County',        path: '/area-vibes/martin-county' },
+      { label: 'Okeechobee County',    path: '/area-vibes/okeechobee-county' },
+      { label: 'Palm Beaches County',  path: '/area-vibes/palm-beach-county' },
+      { label: 'St. Lucie County',     path: '/area-vibes/st-lucie-county' },
     ],
   },
   { label: 'Home Search',    path: '/listings' },
