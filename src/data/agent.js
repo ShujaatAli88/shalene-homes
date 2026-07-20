@@ -5,7 +5,7 @@ export const agent = {
   brokerage: 'KW Reserve',
   phone:     '(561) 371-9555',
   phoneRaw:  '5613719555',
-  email:     'shalene@youlivingforward.com',
+  email:     'shalene@YouLivingForward.com',
   address: {
     street: '6271 PGA Blvd., Suite 200',
     city:   'Palm Beach Gardens',

@@ -55,15 +55,4 @@ export const neighborhoods = [
     avgDOM: '40 days',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
   },
-  {
-    id: 6,
-    name: 'Hutchinson Island',
-    meta: 'Barrier Island · Oceanfront',
-    tagline: 'Private Oceanfront Living on a Protected Barrier Island',
-    description: 'Hutchinson Island offers a rare stretch of low-density, oceanfront living between the Atlantic and the Indian River Lagoon. Luxury condos, gated beachfront communities, and protected shoreline make it one of the Treasure Coast\'s most exclusive addresses.',
-    highlights: ['Direct oceanfront condos', 'Gated beachfront communities', 'Protected sea turtle shoreline', 'Indian River Lagoon views'],
-    medianPrice: '$895K',
-    avgDOM: '45 days',
-    image: 'https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=600&q=80',
-  },
 ]

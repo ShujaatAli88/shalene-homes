@@ -79,7 +79,20 @@ export default function Navbar() {
                     className={`navbar__link${isActive(item) ? ' navbar__link--active' : ''}`}
                   >
                     {item.label}
-                    {item.children && <span className="navbar__chevron">▾</span>}
+                    {item.children && (
+                      <svg
+                        className="navbar__chevron"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    )}
                   </Link>
                   {item.children && (
                     <ul className="navbar__dropdown">
