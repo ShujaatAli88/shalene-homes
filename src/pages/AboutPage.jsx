@@ -17,7 +17,7 @@ const TABS = [
     id: 'story',
     label: 'My Story',
     content: agent.bio[0] + ' ' + agent.bio[1],
-    highlight: '15+',
+    highlight: '9+',
     highlightLabel: 'Years of Experience',
   },
   {

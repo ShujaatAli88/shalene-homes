@@ -30,7 +30,7 @@ export const agent = {
     'Dedicated to delivering extraordinary results for buyers and sellers across Palm Beach, Boca Raton, Delray Beach, Wellington, and Jupiter — with strategy, transparency, and genuine care.',
   locations: ['Palm Beach', 'Boca Raton', 'Delray Beach', 'Wellington', 'Jupiter'],
   stats: [
-    { num: '15+',   label: 'Years of Experience' },
+    { num: '9+',    label: 'Years of Experience' },
     { num: '$2.4B', label: 'In Closed Transactions' },
     { num: '850+',  label: 'Homes Sold' },
     { num: '98%',   label: 'Client Satisfaction Rate' },

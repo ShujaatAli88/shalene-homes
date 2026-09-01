@@ -59,7 +59,7 @@ export default function About() {
               {[
                 { short: 'Licensed REALTOR®',      sub: 'State of Florida' },
                 { short: 'GRI',                    sub: 'Graduate, REALTOR® Institute' },
-                { short: '15+ Years',               sub: 'Real Estate Experience' },
+                { short: '9+ Years',                sub: 'Real Estate Experience' },
                 { short: 'Top 1%',                 sub: 'Palm Beach County' },
               ].map(c => (
                 <div key={c.short} className="about__cred-item">
